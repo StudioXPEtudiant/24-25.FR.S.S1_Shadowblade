@@ -7,7 +7,7 @@ public class Move : MonoBehaviour
     public GameObject Image;
     public float Minspeed = 6f;
 
-    public float jumpspeed = 8f;
+    public float jumpspeed = 100f;
 
     public float gravity = 20f;
 
@@ -39,6 +39,7 @@ public class Move : MonoBehaviour
             if (Input.GetButton("Jump"))
             {
                 moveD.y = jumpspeed;
+               // Cac.SimpleMove(Vector3.up * jumpspeed);
             }
 
             if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -50,30 +51,16 @@ public class Move : MonoBehaviour
             {
                 speed = Minspeed;
             }
-
-            if (!Cac.isGrounded)
-            {
-                if (Cac.velocity.y > 0)
-                {
-                    Debug.Log("ne touche plus le sol, saut");
-                }
-                else if (Cac.velocity.y < 0)
-                {
-                    Debug.Log("ne touche pas le sol, il tombe");
-                }
-                else
-                {
-                    Debug.Log("touche le sol");
-                }
-                
-            }
+            
             
         }
-
-        moveD.y -= gravity * Time.deltaTime;
+        else
+        {
+            moveD.y -= gravity * Time.deltaTime;
+        }
+       
         transform.Rotate(Vector3.up * Input.GetAxis("Horizontal") * Time.deltaTime * speed * 10);
-
-        Cac.Move(moveD * Time.deltaTime);
+       Cac.Move(moveD * Time.deltaTime);
     }
 
     public IEnumerator Waittime()

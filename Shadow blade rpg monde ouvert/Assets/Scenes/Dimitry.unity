@@ -948,6 +948,7 @@ GameObject:
   - component: {fileID: 1702725722}
   - component: {fileID: 1702725721}
   - component: {fileID: 1702725720}
+  - component: {fileID: 1702725726}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -969,7 +970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
   Minspeed: 6
-  jumpspeed: 8
+  jumpspeed: 20
   gravity: 20
   MaxSpeed: 15
   wait: 3
@@ -1063,13 +1064,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702725719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1159309, y: 9.456007, z: 2.6056514}
+  m_LocalPosition: {x: 1.1159309, y: 1.13, z: 1.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1702725726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702725719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e4d4668e94b994888bb371e07eb667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cac: {fileID: 1702725721}
 --- !u!1 &1771729624
 GameObject:
   m_ObjectHideFlags: 0
