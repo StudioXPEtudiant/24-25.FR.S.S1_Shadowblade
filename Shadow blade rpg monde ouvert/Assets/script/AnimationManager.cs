@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
 {
-
+    public float detection;
     public CharacterController Cac;
     // Start is called before the first frame update
     void Start()
@@ -15,7 +15,9 @@ public class AnimationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Cac.isGrounded)
+        RaycastHit hit;
+        Debug.DrawRay(transform.position, transform.up * detection, Color.red);
+        if (Physics.Raycast(transform.position, transform.up, out hit, detection))
         {
             Debug.Log(" sol toucher");
         }

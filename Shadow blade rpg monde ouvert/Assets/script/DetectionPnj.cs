@@ -22,29 +22,10 @@ public class DetectionPnj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(Pnj.position, transform.position) < detection)
-        {
-            activerClick = true;
+        RaycastHit hit;
+        if (Input.GetKey(KeyCode.H))
+        {   
+            Debug.DrawRay(transform.position, transform.forward * detection, Color.red);
         }
-
-        if (Vector3.Distance(Pnj.position, transform.position) > detection)
-        {
-            activerClick = false;
-        }
-
-        if (activerClick = true)
-        {
-            Debug.Log("true");
-            if (Input.GetKey(KeyCode.E))
-            {
-                Debug.Log("Appuiyer");
-            }
-        }
-    }
-
-    public void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, detection);
     }
 }
