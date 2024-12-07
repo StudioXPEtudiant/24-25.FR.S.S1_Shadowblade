@@ -2,15 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destruction : MonoBehaviour
+public class suivre : MonoBehaviour
 {
-    public GameObject Meteor;
-
-    public Transform Meteor2;
-    
-    public GameObject explosion;
-
-    public Vector3 postion;
+    public Transform joueur;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +14,8 @@ public class Destruction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Vector3 newPosition = joueur.position;
+        newPosition.y = transform.position.y;
+        transform.position = newPosition;
     }
 }

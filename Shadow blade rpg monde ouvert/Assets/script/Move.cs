@@ -79,9 +79,11 @@ public class Move : MonoBehaviour
                 speed = Minspeed;
             }
 
-         
-           
-
+            if (Cac.velocity.x <= 0)
+            {
+                andurance += 0.5f * Time.deltaTime;
+            }
+            
             if (andurance >= anduranceMax)
             {
                 andurance = anduranceMax;

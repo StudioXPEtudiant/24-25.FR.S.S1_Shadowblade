@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Dimitry.unity
+    guid: 153a1e0732e045a4da82840eb9b3ba32
   m_configObjects: {}
