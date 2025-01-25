@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
@@ -41,10 +42,13 @@ public class Move : MonoBehaviour
         slider.value = andurance;
     }
 
+    
     // Update is called once per frame
     void Update()
     {
-        
+
+        Vector3 camereDir = Camera.main.transform.forward;
+        camereDir.y = 0;
         if (Cac.isGrounded)
         {
             moveD = new Vector3(0, 0, Input.GetAxis("Vertical"));

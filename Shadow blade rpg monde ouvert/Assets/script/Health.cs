@@ -33,7 +33,6 @@ public class Health : MonoBehaviour
         health = healthmax;
         slider.maxValue = healthmax;
         slider.minValue = healthmin;
-        
     }
 
     // Update is called once per frame
@@ -59,6 +58,7 @@ public class Health : MonoBehaviour
         {
             health += 1 * Time.deltaTime;
         }
+        
     }
 
     public void HealthDecrease()
